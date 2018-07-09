@@ -1,0 +1,2 @@
+# learnautomation
+Automation my ideas :)
