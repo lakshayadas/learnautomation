@@ -21,6 +21,8 @@ public class TemplatePage {
 	
 	By link_Confirmation = By.id("okButton");
 	By template_types = By.xpath("//li[@class='boEditor_categoryClassesInner  animate']");
+	
+	By contact_found = By.xpath("//i[@class='iconNew-refresh refresh_total_user_count']");
 
 	public TemplatePage(WebDriver driver) {
 
