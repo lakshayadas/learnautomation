@@ -1,13 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results skipped="0" failed="1" ignored="0" total="1" passed="0">
+<testng-results ignored="0" total="1" passed="0" failed="1" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite name="Default suite" duration-ms="90" started-at="2018-07-11T10:09:44Z" finished-at="2018-07-11T10:09:44Z">
+  <suite started-at="2018-07-12T10:31:28Z" name="Default suite" finished-at="2018-07-12T10:31:28Z" duration-ms="36">
     <groups>
     </groups>
-    <test name="Default test" duration-ms="90" started-at="2018-07-11T10:09:44Z" finished-at="2018-07-11T10:09:44Z">
+    <test started-at="2018-07-12T10:31:28Z" name="Default test" finished-at="2018-07-12T10:31:28Z" duration-ms="36">
       <class name="EmailBroadcast.BetaoutCookie">
-        <test-method status="FAIL" signature="betacookie(org.openqa.selenium.WebDriver)[pri:0, instance:EmailBroadcast.BetaoutCookie@5faeada1]" name="betacookie" duration-ms="0" started-at="2018-07-11T10:09:44Z" finished-at="2018-07-11T10:09:44Z">
+        <test-method signature="betacookie(org.openqa.selenium.WebDriver)[pri:0, instance:EmailBroadcast.BetaoutCookie@7205765b]" started-at="2018-07-12T10:31:28Z" name="betacookie" finished-at="2018-07-12T10:31:28Z" duration-ms="0" status="FAIL">
           <exception class="org.testng.TestNGException">
             <message>
               <![CDATA[
