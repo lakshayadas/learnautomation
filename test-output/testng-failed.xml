@@ -3,11 +3,12 @@
 <suite name="Failed suite [Default suite]" guice-stage="DEVELOPMENT">
   <test thread-count="5" name="Default test(failed)">
     <classes>
-      <class name="EmailBroadcast.BetaoutCookie">
+      <class name="Dependancy">
         <methods>
-          <include name="betacookie"/>
+          <include name="StartBrowser"/>
+          <include name="StartApp"/>
         </methods>
-      </class> <!-- EmailBroadcast.BetaoutCookie -->
+      </class> <!-- Dependancy -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->

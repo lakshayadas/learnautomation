@@ -1,54 +1,17 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results ignored="0" total="1" passed="0" failed="1" skipped="0">
+<testng-results ignored="0" total="1" passed="1" failed="0" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2018-07-12T10:31:28Z" name="Default suite" finished-at="2018-07-12T10:31:28Z" duration-ms="36">
+  <suite started-at="2018-07-18T12:13:36Z" name="Default suite" finished-at="2018-07-18T12:13:41Z" duration-ms="5224">
     <groups>
     </groups>
-    <test started-at="2018-07-12T10:31:28Z" name="Default test" finished-at="2018-07-12T10:31:28Z" duration-ms="36">
-      <class name="EmailBroadcast.BetaoutCookie">
-        <test-method signature="betacookie(org.openqa.selenium.WebDriver)[pri:0, instance:EmailBroadcast.BetaoutCookie@7205765b]" started-at="2018-07-12T10:31:28Z" name="betacookie" finished-at="2018-07-12T10:31:28Z" duration-ms="0" status="FAIL">
-          <exception class="org.testng.TestNGException">
-            <message>
-              <![CDATA[
-Cannot inject @Test annotated Method [betacookie] with [interface org.openqa.selenium.WebDriver].
-For more information on native dependency injection please refer to http://testng.org/doc/documentation-main.html#native-dependency-injection]]>
-            </message>
-            <full-stacktrace>
-              <![CDATA[org.testng.TestNGException: 
-Cannot inject @Test annotated Method [betacookie] with [interface org.openqa.selenium.WebDriver].
-For more information on native dependency injection please refer to http://testng.org/doc/documentation-main.html#native-dependency-injection
-at org.testng.internal.Parameters.checkParameterTypes(Parameters.java:407)
-at org.testng.internal.Parameters.createParametersForMethod(Parameters.java:356)
-at org.testng.internal.Parameters.createParameters(Parameters.java:635)
-at org.testng.internal.Parameters.handleParameters(Parameters.java:769)
-at org.testng.internal.ParameterHandler.handleParameters(ParameterHandler.java:49)
-at org.testng.internal.ParameterHandler.createParameters(ParameterHandler.java:37)
-at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:923)
-at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:125)
-at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:109)
-at org.testng.TestRunner.privateRun(TestRunner.java:648)
-at org.testng.TestRunner.run(TestRunner.java:505)
-at org.testng.SuiteRunner.runTest(SuiteRunner.java:455)
-at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:450)
-at org.testng.SuiteRunner.privateRun(SuiteRunner.java:415)
-at org.testng.SuiteRunner.run(SuiteRunner.java:364)
-at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
-at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:84)
-at org.testng.TestNG.runSuitesSequentially(TestNG.java:1208)
-at org.testng.TestNG.runSuitesLocally(TestNG.java:1137)
-at org.testng.TestNG.runSuites(TestNG.java:1049)
-at org.testng.TestNG.run(TestNG.java:1017)
-at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:114)
-at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
-at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
-]]>
-            </full-stacktrace>
-          </exception> <!-- org.testng.TestNGException -->
+    <test started-at="2018-07-18T12:13:36Z" name="Default test" finished-at="2018-07-18T12:13:41Z" duration-ms="5224">
+      <class name="PhpTravels">
+        <test-method signature="loginApp()[pri:0, instance:PhpTravels@35aea049]" started-at="2018-07-18T12:13:36Z" name="loginApp" finished-at="2018-07-18T12:13:41Z" duration-ms="5196" status="PASS">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- betacookie -->
-      </class> <!-- EmailBroadcast.BetaoutCookie -->
+        </test-method> <!-- loginApp -->
+      </class> <!-- PhpTravels -->
     </test> <!-- Default test -->
   </suite> <!-- Default suite -->
 </testng-results>

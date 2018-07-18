@@ -6,7 +6,7 @@ import org.openqa.selenium.chrome.ChromeDriver;
 public class LoginPAge {
 
 	
-
+	
 	public static void main(String[] args) throws Throwable {
 
 		System.setProperty(".webdriver.chrome.driver",
@@ -18,6 +18,7 @@ public class LoginPAge {
 
 		driver.get("https://urza.betaout.com/");
 	
+		
 		// Using Cookie Class From BetaoutCookie
 
 		BetaoutCookie.betacookie(driver);
@@ -27,7 +28,7 @@ public class LoginPAge {
 		abcd.EmailBroadCast(driver);
 		
 		
-	}
+	}	
 		public static class BroadCast {
 			
 			public void EmailBroadCast(WebDriver driver) {
