@@ -6,9 +6,10 @@ import org.openqa.selenium.By;
 import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
+import org.testng.annotations.Test;
 
 public class Property {
-
+	@Test
 	public static void property(WebDriver driver) {
 
 		By property = By.xpath("//span[contains(text(), 'Property')]");
@@ -36,7 +37,7 @@ public class Property {
 		}
 
 	}
-
+	@Test
 	public static void search(WebDriver driver) {
 
 		By select_property = By.xpath("//a[@data-parentkey='userproperty']");
@@ -70,7 +71,7 @@ public class Property {
 		}
 
 	}
-
+	@Test
 	public static void filter(WebDriver driver) {
 
 		By where = By.xpath("//span[contains(text(),'Where')]");
@@ -107,6 +108,7 @@ public class Property {
 			}
 		}
 	}
+	@Test
 	public static void enteremail(WebDriver driver) {
 		By input = By.xpath("//input[@placeholder='Enter']");
 		

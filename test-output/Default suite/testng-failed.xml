@@ -3,12 +3,11 @@
 <suite name="Failed suite [Default suite]" guice-stage="DEVELOPMENT">
   <test thread-count="5" name="Default test(failed)">
     <classes>
-      <class name="Dependancy">
+      <class name="EmailBroadcast.LoginPAge$BroadCast">
         <methods>
-          <include name="StartBrowser"/>
-          <include name="StartApp"/>
+          <include name="EmailBroadCast"/>
         </methods>
-      </class> <!-- Dependancy -->
+      </class> <!-- EmailBroadcast.LoginPAge$BroadCast -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->

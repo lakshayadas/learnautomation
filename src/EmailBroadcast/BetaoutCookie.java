@@ -4,9 +4,10 @@ import org.openqa.selenium.By;
 import org.openqa.selenium.Cookie;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
+import org.testng.annotations.Test;
 
 public class BetaoutCookie {
-
+	@Test
 	public static void betacookie(WebDriver driver) {
 
 		Cookie _amplifyClientId = new Cookie("_amplifyClientId", "nvN4BSoi8pQ%3D");

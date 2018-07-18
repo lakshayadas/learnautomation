@@ -7,6 +7,7 @@ import org.openqa.selenium.By;
 import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
+import org.testng.annotations.Test;
 
 public class CampaignPage {
 
@@ -25,12 +26,12 @@ public class CampaignPage {
 		this.driver = driver;
 
 	}
-
+	@Test
 	public void typeCampaignName() {
 
 		driver.findElement(campaign_name).sendKeys("Test Campaign");
 	}
-
+	@Test
 	public void selectSenderId() throws Throwable {
 
 		Thread.sleep(5000);
@@ -77,12 +78,12 @@ public class CampaignPage {
 
 	}
 
-	
+	@Test
 	  public void typeSubjectName() {
 	  
 	  driver.findElement(subject).sendKeys("This is Test Email"); }
 	  
-	
+	@Test
 	  public void typeCampaignTag() {
 	  
 	  String []add_tag = {"Cars","Bikes","Air"};
@@ -98,7 +99,7 @@ public class CampaignPage {
 	  }
 	  
 	  }
-
+	@Test
 	public void clickOnSaveAndNext() {
 
 		driver.findElement(save_next).click();

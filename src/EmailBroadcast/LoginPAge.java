@@ -2,11 +2,13 @@ package EmailBroadcast;
 
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
+import org.testng.annotations.Parameters;
+import org.testng.annotations.Test;
 
 public class LoginPAge {
 
 	
-	
+	@Test
 	public static void main(String[] args) throws Throwable {
 
 		System.setProperty(".webdriver.chrome.driver",
@@ -30,7 +32,8 @@ public class LoginPAge {
 		
 	}	
 		public static class BroadCast {
-			
+			@Parameters({"WebDriver driver"})
+			@Test
 			public void EmailBroadCast(WebDriver driver) {
 		
 		

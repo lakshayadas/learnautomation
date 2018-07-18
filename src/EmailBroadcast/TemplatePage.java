@@ -9,6 +9,7 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.interactions.Actions;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
+import org.testng.annotations.Test;
 
 public class TemplatePage {
 
@@ -28,7 +29,7 @@ public class TemplatePage {
 
 		this.driver = driver;
 	}
-
+	@Test
 	public void select_template() throws Throwable {
 
 		driver.manage().timeouts().implicitlyWait(5, TimeUnit.SECONDS);
@@ -80,7 +81,7 @@ public class TemplatePage {
 		}
 
 	}
-
+	@Test
 	public void changeTemplate() {
 
 		WebDriverWait wait = new WebDriverWait(driver, 30);
@@ -89,7 +90,7 @@ public class TemplatePage {
 				.visibilityOfElementLocated(By.xpath("//button[@class='btn-submit-blue changetemplateAlertBtn']")));
 		driver.findElement(change_template).click();
 	}
-
+	@Test
 	public void save_next() {
 		
 		try {
@@ -100,7 +101,7 @@ public class TemplatePage {
 		}	
 		driver.findElement(save_next).click();
 	}
-
+	@Test
 	public void link_confirm() {
 		
 		try {

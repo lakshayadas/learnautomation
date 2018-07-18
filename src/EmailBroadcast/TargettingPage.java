@@ -9,6 +9,7 @@ import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.interactions.Actions;
 import org.openqa.selenium.support.ui.Select;
+import org.testng.annotations.Test;
 
 public class TargettingPage {
 	
@@ -27,7 +28,7 @@ public class TargettingPage {
 			this.driver=driver;
 			
 		}
-		
+		@Test
 		public void conditons() {
 			
 		
@@ -50,6 +51,7 @@ public class TargettingPage {
 			actions.moveToElement(select_conditions).click().perform();
 			
 		}
+		@Test
 		public void dropdown() {
 			
 			driver.manage().timeouts().implicitlyWait(5, TimeUnit.SECONDS);
