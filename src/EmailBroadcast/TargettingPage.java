@@ -18,11 +18,9 @@ public class TargettingPage {
 	WebDriver driver;
 	
 	
-		By and = By.xpath("//a[contains(text(), 'ADD NEW')]");
-		By dropdown = By.xpath("//div[@class='dropdown seg-row-errow']");
-		
-		By select_property = By.xpath("//a[@data-parentkey='userproperty']");
-		
+		By Add_new = By.xpath("//a[contains(text(), 'ADD NEW')]");
+		By Select_dropdown = By.xpath("//span[contains(text(), 'Select')]");
+	
 		public TargettingPage(WebDriver driver) {
 			
 			this.driver=driver;
@@ -38,7 +36,7 @@ public class TargettingPage {
 				// TODO Auto-generated catch block
 				e.printStackTrace();
 			}
-			List<WebElement> conditions = driver.findElements(and);
+			List<WebElement> conditions = driver.findElements(Add_new);
 			
 			int count = conditions.size();
 			
@@ -56,7 +54,7 @@ public class TargettingPage {
 			
 			driver.manage().timeouts().implicitlyWait(5, TimeUnit.SECONDS);
 			
-			driver.findElement(dropdown).click();
+			driver.findElement(Select_dropdown).click();
 			
 			
 		}

@@ -30,7 +30,7 @@ public class TemplatePage {
 		this.driver = driver;
 	}
 	@Test
-	public void select_template() throws Throwable {
+	public void select_template(String ChooseTemplateType) throws Throwable {
 
 		driver.manage().timeouts().implicitlyWait(5, TimeUnit.SECONDS);
 		List<WebElement> Bo_template_types = driver.findElements(template_types);
@@ -49,15 +49,22 @@ public class TemplatePage {
 			System.out.println("Template are " + Template);
 	
 		
-		if(Template.equalsIgnoreCase("THEME")) {
+		if(Template.equalsIgnoreCase(ChooseTemplateType)) {
 			
 			Thread.sleep(5000);
-			templates.click();
+			
+			Actions actions = new Actions(driver);
+			
+			actions.click(templates).perform();
 			
 			
 		}
 		
 		}
+		
+		
+		driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
+		
 		List<WebElement> alltemplates = driver.findElements(dragtemplates);
 
 		int count = alltemplates.size();
@@ -65,18 +72,20 @@ public class TemplatePage {
 		System.out.println("No of Templates " + count);
 		for (int i = 0; i < count;) {
 
+			Thread.sleep(5000);
 			WebElement listTemplates = alltemplates.get(4);
 			
 			String aaaa= listTemplates.getText();
 
-			System.out.println("Hey there " + listTemplates+ "and fff" +aaaa);
+			System.out.println("Hey there " + listTemplates+ "and are  " +aaaa);
 
 			WebElement drop = driver.findElement(drop_template);
 
-			Thread.sleep(5000);
 			Actions action = new Actions(driver);
+			
+			driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
 
-			action.dragAndDrop(listTemplates, drop).perform();
+			action.dragAndDrop(listTemplates, drop).click().perform();
 			break;
 		}
 

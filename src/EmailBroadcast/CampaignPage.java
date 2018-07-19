@@ -12,6 +12,7 @@ import org.testng.annotations.Test;
 public class CampaignPage {
 
 	WebDriver driver;
+	
 
 	By campaign_name = By.id("news_letter_name");
 	By sender_id = By.id("senderSelected");
@@ -27,12 +28,12 @@ public class CampaignPage {
 
 	}
 	@Test
-	public void typeCampaignName() {
+	public void typeCampaignName(String EnterCampaignName) {
 
-		driver.findElement(campaign_name).sendKeys("Test Campaign");
+		driver.findElement(campaign_name).sendKeys(EnterCampaignName);
 	}
 	@Test
-	public void selectSenderId() throws Throwable {
+	public void selectSenderId(String EnterEmail) throws Throwable {
 
 		Thread.sleep(5000);
 		
@@ -52,10 +53,11 @@ public class CampaignPage {
 			
 			driver.get("https://urza.betaout.com/email/server-setup/");
 		
-			EmailIntegration.main(driver);
 			
-		
-		}
+			// will Switch to the Email integration Page.
+				EmailIntegration.main(driver);
+			
+			}
 		
 		for (int i = 0; i < count; i++) {
 
@@ -69,7 +71,7 @@ public class CampaignPage {
 			
 			System.out.println("All Email ids are " + emails+ "is " +status);
 			
-			if(emails.equalsIgnoreCase("Lakshaya@getamplify.com(gmail)")) {
+			if(emails.equalsIgnoreCase(EnterEmail)) {
 				
 				email.click();
 				break;
@@ -79,14 +81,15 @@ public class CampaignPage {
 	}
 
 	@Test
-	  public void typeSubjectName() {
+	  public void typeSubjectName(String SubJectName) {
 	  
-	  driver.findElement(subject).sendKeys("This is Test Email"); }
+	  driver.findElement(subject).sendKeys(SubJectName); }
 	  
 	@Test
-	  public void typeCampaignTag() {
+	  	
+		public void typeCampaignTag(String []add_tag) {
 	  
-	  String []add_tag = {"Cars","Bikes","Air"};
+//	  String []add_tag = {"Cars","Bikes","Air"};
 	  
 	  for(int i =0; i<add_tag.length;i++) {
 	  

@@ -2,7 +2,6 @@ package EmailBroadcast;
 
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
-import org.testng.annotations.Parameters;
 import org.testng.annotations.Test;
 
 public class LoginPAge {
@@ -29,57 +28,67 @@ public class LoginPAge {
 		
 		abcd.EmailBroadCast(driver);
 		
-		//lakshaya
+		
 	}	
 		public static class BroadCast {
-			@Parameters({"WebDriver driver"})
+			
 			@Test
 			public void EmailBroadCast(WebDriver driver) {
 		
 		
-		driver.get("https://urza.betaout.com/email/choose-campaign-type/nv/campaignType/broadcast");
+	//	driver.get("https://urza.betaout.com/email/choose-campaign-type/nv/campaignType/broadcast");
+				driver.get("https://urza.betaout.com/email/choose-recepients/nv/cTypeId/127580/ucId/986514/re/0");
+		
+		// This is Campaign Page which has all object and methods.
 		
 		CampaignPage broadcast = new CampaignPage(driver);
 
-		broadcast.typeCampaignName();
+		broadcast.typeCampaignName("Test Campaign");
 		try {
-			broadcast.selectSenderId();
+			broadcast.selectSenderId("Lakshaya@getamplify.com(gmail)");
 		} catch (Throwable e) {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
 		}
-		broadcast.typeSubjectName();
-		broadcast.typeCampaignTag();
+		String []Tag = {"Nitin","Bikes","Air"};
+		
+		broadcast.typeSubjectName("This is Test Email");
+		broadcast.typeCampaignTag(Tag);
 		broadcast.clickOnSaveAndNext(); 
 		
+	
+		// This is Template Page which has all object and methods.
 		
 		TemplatePage Bo_editor = new TemplatePage(driver);
 		
 		try {
-			Bo_editor.select_template();
+			Bo_editor.select_template("THEME");
 		} catch (Throwable e) {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
 		}
+		
 		Bo_editor.changeTemplate();
 		Bo_editor.save_next();
 		Bo_editor.link_confirm();
 		 
-		
+		// // This is Targeting Page which has all object and methods.
 		TargettingPage target = new TargettingPage(driver);
 		
 		target.conditons();
 		target.dropdown();
 		
+		// This is SegmentClick options Page which has all object and methods.
 		UserSegmentClick segment = new UserSegmentClick(driver);
-		segment.selectcon();
+		segment.selectcon("have");
 		
-		Property.property(driver);
-		Property.search(driver);
-		Property.filter(driver);
-		Property.enteremail(driver);
+		Property.property(driver, "User");
+		Property.search(driver, "email");
+		Property.filter(driver, "Exactly As");
+		Property.enteremail(driver , "lakshaya@getamplify.com");
 		Bo_editor.save_next();
 		
+		// // This is Send Email Page which has all object and methods.
 		SendEmail.SendBEmail(driver);
 		
 		// Verify Broken Links

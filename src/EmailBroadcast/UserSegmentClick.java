@@ -21,7 +21,7 @@ public class UserSegmentClick {
 
 	}
 	@Test
-	public void selectcon() {
+	public void selectcon(String condition) {
 
 		
 		driver.manage().timeouts().implicitlyWait(5, TimeUnit.SECONDS);	
@@ -42,7 +42,7 @@ public class UserSegmentClick {
 
 			System.out.println("List of segment are " + segdrop.getText());
 
-			if (segment_options.equalsIgnoreCase("have")) {
+			if (segment_options.equalsIgnoreCase(condition)) {
 
 				segdrop.click();
 			}

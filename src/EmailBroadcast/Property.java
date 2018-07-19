@@ -10,7 +10,7 @@ import org.testng.annotations.Test;
 
 public class Property {
 	@Test
-	public static void property(WebDriver driver) {
+	public static void property(WebDriver driver, String EnterProperty) {
 
 		By property = By.xpath("//span[contains(text(), 'Property')]");
 		By dropdown_submenu = By.xpath("//li[@class='dropdown-submenu']");
@@ -27,9 +27,9 @@ public class Property {
 
 			String user_property = property_menue.getText();
 
-			System.out.println("Segment Properties are " + user_property);
+			System.out.println("No of Segment :"+count2+ "And Properties are" + user_property);
 
-			if (user_property.equalsIgnoreCase("user")) {
+			if (user_property.equalsIgnoreCase(EnterProperty)) {
 
 				property_menue.click();
 			}
@@ -38,7 +38,7 @@ public class Property {
 
 	}
 	@Test
-	public static void search(WebDriver driver) {
+	public static void search(WebDriver driver, String Email) {
 
 		By select_property = By.xpath("//a[@data-parentkey='userproperty']");
 		List<WebElement> userproperty = driver.findElements(select_property);
@@ -55,7 +55,7 @@ public class Property {
 
 			System.out.println("User Property are " + user_text);
 
-			if (user_text.equalsIgnoreCase("email")) {
+			if (user_text.equalsIgnoreCase(Email)) {
 
 				// Scroll until element is visible
 				((JavascriptExecutor) driver).executeScript("arguments[0].scrollIntoView(true);", propert_text);
@@ -72,7 +72,7 @@ public class Property {
 
 	}
 	@Test
-	public static void filter(WebDriver driver) {
+	public static void filter(WebDriver driver, String FilterType) {
 
 		By where = By.xpath("//span[contains(text(),'Where')]");
 		By select = By.xpath(("//span[contains(text(), 'Select : ')]"));
@@ -93,7 +93,7 @@ public class Property {
 			String filter_select = filter_text.getText();
 
 			System.out.println("filters are " + filter_select);
-			if (filter_select.equalsIgnoreCase("Exactly As")) {
+			if (filter_select.equalsIgnoreCase(FilterType)) {
 
 				try {
 					Thread.sleep(500);
@@ -109,10 +109,10 @@ public class Property {
 		}
 	}
 	@Test
-	public static void enteremail(WebDriver driver) {
+	public static void enteremail(WebDriver driver, String EnterEmail) {
 		By input = By.xpath("//input[@placeholder='Enter']");
 		
-			driver.findElement(input).sendKeys("lakshaya@getamplify.com");
+			driver.findElement(input).sendKeys(EnterEmail);
 		
 	}
 }
