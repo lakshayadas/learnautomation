@@ -2,5 +2,21 @@
 <!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
 <suite name="Suite">
   <test thread-count="5" name="Test">
+    <classes>
+      <class name="EmailBroadcast.LoginPAge"/>
+      <class name="ListenersDemo.MyFirstTestCase"/>
+      <class name="EmailBroadcast.BetaoutCookie"/>
+      <class name="EmailBroadcast.TemplatePage"/>
+      <class name="EmailBroadcast.UserSegmentClick"/>
+      <class name="EmailBroadcast.CampaignPage"/>
+      <class name="ListenersDemo.NoInjestionTest"/>
+      <class name="PageFactory.PageFactory"/>
+      <class name=".Dependancy"/>
+      <class name="EmailBroadcast.Property"/>
+      <class name="EmailBroadcast.TargettingPage"/>
+      <class name=".TestNGPriority"/>
+      <class name="EmailBroadcast.BroadCast"/>
+      <class name="EmailBroadcast.SendEmail"/>
+    </classes>
   </test> <!-- Test -->
 </suite> <!-- Suite -->

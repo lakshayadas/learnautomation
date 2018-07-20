@@ -1,5 +1,6 @@
 package EmailBroadcast;
 
+import org.testng.annotations.Test;
 import java.util.List;
 
 import org.openqa.selenium.By;

@@ -164,7 +164,7 @@ For more information on native dependency injection please refer to http://testn
         </div> <!-- panel Suite -->
         <div panel-name="test-xml-Suite" class="panel">
           <div class="main-panel-header rounded-window-top">
-            <span class="header-content">/tmp/testng-eclipse--1565233725/testng-customsuite.xml</span>
+            <span class="header-content">/tmp/testng-eclipse--55571337/testng-customsuite.xml</span>
           </div> <!-- main-panel-header rounded-window-top -->
           <div class="main-panel-content rounded-window-bottom">
             <pre>
@@ -173,7 +173,11 @@ For more information on native dependency injection please refer to http://testn
 &lt;suite name=&quot;Suite&quot; guice-stage=&quot;DEVELOPMENT&quot;&gt;
   &lt;test thread-count=&quot;5&quot; name=&quot;Default test&quot; verbose=&quot;2&quot;&gt;
     &lt;classes&gt;
-      &lt;class name=&quot;EmailBroadcast.LoginPAge&quot;/&gt;
+      &lt;class name=&quot;EmailBroadcast.LoginPAge&quot;&gt;
+        &lt;methods&gt;
+          &lt;include name=&quot;main&quot;/&gt;
+        &lt;/methods&gt;
+      &lt;/class&gt; &lt;!-- EmailBroadcast.LoginPAge --&gt;
     &lt;/classes&gt;
   &lt;/test&gt; &lt;!-- Default test --&gt;
 &lt;/suite&gt; &lt;!-- Suite --&gt;

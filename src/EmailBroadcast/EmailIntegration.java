@@ -88,12 +88,9 @@ public class EmailIntegration  {
 				
 			Thread.sleep(5000);
 			
-			BroadCast abcd = new BroadCast();
+			BroadCast campaign = new BroadCast();
 			
-			abcd.EmailBroadCast(driver);
-			
-			
-			
+			campaign.EmailBroadCast(driver);
 			
 			
 			

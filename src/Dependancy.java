@@ -1,7 +1,10 @@
+import org.testng.annotations.AfterClass;
+import org.testng.annotations.Test;
+import org.testng.annotations.BeforeClass;
+import org.testng.AssertJUnit;
 import java.util.List;
 import java.util.concurrent.TimeUnit;
 
-import org.junit.Assert;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
@@ -30,7 +33,7 @@ public class Dependancy {
 	
 		
 		String current_url = driver.getCurrentUrl();
-		Assert.assertTrue(current_url.contains("facebook"));
+		AssertJUnit.assertTrue(current_url.contains("facebook"));
 		System.out.println("Application Loaded");
 	}
 
@@ -47,7 +50,7 @@ public class Dependancy {
 		Thread.sleep(5000);
 		boolean status = driver.findElement(By.id("navItem_4748854339")).isDisplayed();
 		
-		Assert.assertTrue(status);
+		AssertJUnit.assertTrue(status);
 		
 		
 	}
@@ -69,7 +72,7 @@ public class Dependancy {
 			System.out.println("list are "+count);
 		}
 		
-		Assert.assertTrue(driver.findElement(By.id("pageLoginAnchor")).isDisplayed());
+		AssertJUnit.assertTrue(driver.findElement(By.id("pageLoginAnchor")).isDisplayed());
 				
 	}
 	@AfterClass

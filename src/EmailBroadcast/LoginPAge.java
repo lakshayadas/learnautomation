@@ -1,8 +1,8 @@
 package EmailBroadcast;
 
+import org.testng.annotations.Test;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
-import org.testng.annotations.Test;
 
 public class LoginPAge {
 
@@ -24,10 +24,9 @@ public class LoginPAge {
 
 		BetaoutCookie.betacookie(driver);
 		
-		BroadCast abcd = new BroadCast();
+		BroadCast campaign = new BroadCast();
 		
-		abcd.EmailBroadCast(driver);
-		
+		campaign.EmailBroadCast(driver);
 		
 	}	
 		public static class BroadCast {
@@ -36,8 +35,8 @@ public class LoginPAge {
 			public void EmailBroadCast(WebDriver driver) {
 		
 		
-	//	driver.get("https://urza.betaout.com/email/choose-campaign-type/nv/campaignType/broadcast");
-				driver.get("https://urza.betaout.com/email/choose-recepients/nv/cTypeId/127580/ucId/986514/re/0");
+		driver.get("https://urza.betaout.com/email/choose-campaign-type/nv/campaignType/broadcast");
+		//		driver.get("https://urza.betaout.com/email/choose-recepients/nv/cTypeId/127580/ucId/986514/re/0");
 		
 		// This is Campaign Page which has all object and methods.
 		
@@ -89,7 +88,7 @@ public class LoginPAge {
 		Bo_editor.save_next();
 		
 		// // This is Send Email Page which has all object and methods.
-		SendEmail.SendBEmail(driver);
+		SendEmail.main(driver);
 		
 		// Verify Broken Links
 		// VerifyLinks.main(driver);
